@@ -11,8 +11,7 @@ function btnBgChange(event) {
     event.classList.remove('border-gray-300');
 }
 
-
-// Buttons
+// Function for Buttons
 historyBtn.addEventListener('click', function () {
     document.getElementById('donate-noukhali').classList.add('hidden')
     document.getElementById('donate-feni').classList.add('hidden')
@@ -27,14 +26,12 @@ donationBtn.addEventListener('click', function () {
     document.getElementById('donate-movement').classList.remove('hidden')
 })
 
-
 // Blog Page
 document.getElementById('blog-btn').addEventListener('click', function () {
     window.location.href = 'blog.html'
 })
 
-
-// Common Functions and Reuseable Functions (Challenge Part)
+// Common Functions (Challenge Part)
 function handleDonationValueById(id) {
     const donationValue = document.getElementById(id).value;
     const donationNumber = Number(donationValue);
