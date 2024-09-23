@@ -31,13 +31,14 @@ document.getElementById('blog-btn').addEventListener('click', function () {
     window.location.href = 'blog.html'
 })
 
-// Common Functions (Challenge Part)
+// Common Function 1 (Challenge Part)
 function handleDonationValueById(id) {
     const donationValue = document.getElementById(id).value;
     const donationNumber = Number(donationValue);
     return donationNumber
 }
 
+// Common Function 2 (Challenge Part)
 function handleDonationAmountById(id) {
     const totalDonationAmount = document.getElementById(id).innerText;
     const totalDonationNumber = Number(totalDonationAmount);
@@ -47,10 +48,10 @@ function handleDonationAmountById(id) {
 // Card 1
 document.getElementById('donate-now-btn1').addEventListener('click', function () {
     const donationAmount = handleDonationValueById('donation-amount1');
-    if (donationAmount < 0 || isNaN(donationAmount)) {
+    const totalDonation = handleDonationAmountById('total-donation');
+    if (donationAmount < 0 || isNaN(donationAmount) || donationAmount > totalDonation || !donationAmount) {
         return alert('Invalid Donation Amount')
     }
-    const totalDonation = handleDonationAmountById('total-donation');
     const currentDonation = handleDonationAmountById('donation-bdt1');
     const currentAmount = currentDonation + donationAmount;
     const newAmount = totalDonation - donationAmount;
@@ -71,10 +72,10 @@ document.getElementById('donate-now-btn1').addEventListener('click', function ()
 // Card 2
 document.getElementById('donate-now-btn2').addEventListener('click', function () {
     const donationAmount = handleDonationValueById('donation-amount2');
-    if (donationAmount < 0 || isNaN(donationAmount)) {
+    const totalDonation = handleDonationAmountById('total-donation');
+    if (donationAmount < 0 || isNaN(donationAmount) || donationAmount > totalDonation || !donationAmount) {
         return alert('Invalid Donation Amount')
     }
-    const totalDonation = handleDonationAmountById('total-donation');
     const currentDonation = handleDonationAmountById('donation-bdt2');
     const currentAmount = currentDonation + donationAmount;
     const newAmount = totalDonation - donationAmount;
@@ -95,10 +96,10 @@ document.getElementById('donate-now-btn2').addEventListener('click', function ()
 // Card 3
 document.getElementById('donate-now-btn3').addEventListener('click', function () {
     const donationAmount = handleDonationValueById('donation-amount3');
-    if (donationAmount < 0 || isNaN(donationAmount)) {
+    const totalDonation = handleDonationAmountById('total-donation');
+    if (donationAmount < 0 || isNaN(donationAmount) || donationAmount > totalDonation || !donationAmount) {
         return alert('Invalid Donation Amount')
     }
-    const totalDonation = handleDonationAmountById('total-donation');
     const currentDonation = handleDonationAmountById('donation-bdt3');
     const currentAmount = currentDonation + donationAmount;
     const newAmount = totalDonation - donationAmount;
