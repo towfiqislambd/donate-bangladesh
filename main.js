@@ -51,8 +51,10 @@ document.getElementById('donate-now-btn1').addEventListener('click', function ()
         return alert('Invalid Donation Amount')
     }
     const totalDonation = handleDonationAmountById('total-donation');
+    const currentDonation = handleDonationAmountById('donation-bdt1');
+    const currentAmount = currentDonation + donationAmount;
     const newAmount = totalDonation - donationAmount;
-    document.getElementById('donation-bdt1').innerText = donationAmount;
+    document.getElementById('donation-bdt1').innerText = currentAmount;
     document.getElementById('total-donation').innerText = newAmount
     my_modal_1.showModal()
 
@@ -73,8 +75,10 @@ document.getElementById('donate-now-btn2').addEventListener('click', function ()
         return alert('Invalid Donation Amount')
     }
     const totalDonation = handleDonationAmountById('total-donation');
+    const currentDonation = handleDonationAmountById('donation-bdt2');
+    const currentAmount = currentDonation + donationAmount;
     const newAmount = totalDonation - donationAmount;
-    document.getElementById('donation-bdt2').innerText = donationAmount;
+    document.getElementById('donation-bdt2').innerText = currentAmount;
     document.getElementById('total-donation').innerText = newAmount
     my_modal_1.showModal()
 
@@ -95,8 +99,10 @@ document.getElementById('donate-now-btn3').addEventListener('click', function ()
         return alert('Invalid Donation Amount')
     }
     const totalDonation = handleDonationAmountById('total-donation');
+    const currentDonation = handleDonationAmountById('donation-bdt3');
+    const currentAmount = currentDonation + donationAmount;
     const newAmount = totalDonation - donationAmount;
-    document.getElementById('donation-bdt3').innerText = donationAmount;
+    document.getElementById('donation-bdt3').innerText = currentAmount;
     document.getElementById('total-donation').innerText = newAmount
     my_modal_1.showModal()
 
