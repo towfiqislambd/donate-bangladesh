@@ -1,32 +1,16 @@
-// Global Variables
-const donationBtn = document.getElementById('donation-btn')
-const historyBtn = document.getElementById('history-btn')
-const donationForNoukhali = document.getElementById('donate-noukhali');
-const donationForFeni = document.getElementById('donate-feni');
-const donationForMovement = document.getElementById('donate-movement');
-const historySection = document.getElementById('history')
-
-// Donation & History Button
-function btnBgChange(event) {
-    donationBtn.classList.remove('bg-lime-300')
-    historyBtn.classList.remove('bg-lime-300')
-    event.classList.add('bg-lime-300')
-    event.classList.remove('bg-transparent')
-    event.classList.remove('border-gray-300');
-}
-
-// Function for Buttons
-historyBtn.addEventListener('click', function () {
-    donationForNoukhali.classList.add('hidden')
-    donationForFeni.classList.add('hidden')
-    donationForMovement.classList.add('hidden')
-    historySection.classList.remove('hidden')
+// donation and history button
+document.getElementById('history-btn').addEventListener('click', function () {
+    document.getElementById('donation-btn').classList.remove('bg-lime-300')
+    document.getElementById('history-btn').classList.add('bg-lime-300')
+    document.getElementById('history-btn').classList.remove('border-gray-300')
+    document.getElementById('parent-section').classList.add('hidden')
+    document.getElementById('history').classList.remove('hidden')
 })
-donationBtn.addEventListener('click', function () {
-    historySection.classList.add('hidden')
-    donationForNoukhali.classList.remove('hidden')
-    donationForFeni.classList.remove('hidden')
-    donationForMovement.classList.remove('hidden')
+document.getElementById('donation-btn').addEventListener('click', function () {
+    document.getElementById('donation-btn').classList.add('bg-lime-300')
+    document.getElementById('history-btn').classList.remove('bg-lime-300')
+    document.getElementById('parent-section').classList.remove('hidden')
+    document.getElementById('history').classList.add('hidden')
 })
 
 // Blog Page
@@ -48,7 +32,7 @@ document.getElementById('donate-now-btn1').addEventListener('click', function ()
     document.getElementById('total-donation').innerText = newAmount
     my_modal_1.showModal()
 
-    historySection.innerHTML += `
+    document.getElementById('history').innerHTML += `
         <div class="border p-5 rounded-lg mb-3">
             <p class="mb-2 font-medium">
                 ${donationAmount} Taka ${document.getElementById('donation-heading1').innerText}
@@ -72,7 +56,7 @@ document.getElementById('donate-now-btn2').addEventListener('click', function ()
     document.getElementById('total-donation').innerText = newAmount
     my_modal_1.showModal()
 
-    historySection.innerHTML += `
+    document.getElementById('history').innerHTML += `
         <div class="border p-5 rounded-lg mb-3">
             <p class="mb-2 font-medium">
                 ${donationAmount} Taka ${document.getElementById('donation-heading2').innerText}
@@ -96,7 +80,7 @@ document.getElementById('donate-now-btn3').addEventListener('click', function ()
     document.getElementById('total-donation').innerText = newAmount
     my_modal_1.showModal()
 
-    historySection.innerHTML += `
+    document.getElementById('history').innerHTML += `
         <div class="border p-5 rounded-lg mb-3">
             <p class="mb-2 font-medium">
                 ${donationAmount} Taka ${document.getElementById('donation-heading3').innerText}
