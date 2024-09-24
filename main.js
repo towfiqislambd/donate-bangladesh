@@ -1,5 +1,9 @@
+// Global Variables
 const donationBtn = document.getElementById('donation-btn')
 const historyBtn = document.getElementById('history-btn')
+const donationForNoukhali = document.getElementById('donate-noukhali');
+const donationForFeni = document.getElementById('donate-feni');
+const donationForMovement = document.getElementById('donate-movement');
 const historySection = document.getElementById('history')
 
 // Donation & History Button
@@ -13,37 +17,22 @@ function btnBgChange(event) {
 
 // Function for Buttons
 historyBtn.addEventListener('click', function () {
-    document.getElementById('donate-noukhali').classList.add('hidden')
-    document.getElementById('donate-feni').classList.add('hidden')
-    document.getElementById('donate-movement').classList.add('hidden')
-    document.getElementById('history').classList.remove('hidden')
+    donationForNoukhali.classList.add('hidden')
+    donationForFeni.classList.add('hidden')
+    donationForMovement.classList.add('hidden')
+    historySection.classList.remove('hidden')
 })
-
 donationBtn.addEventListener('click', function () {
-    document.getElementById('history').classList.add('hidden')
-    document.getElementById('donate-noukhali').classList.remove('hidden')
-    document.getElementById('donate-feni').classList.remove('hidden')
-    document.getElementById('donate-movement').classList.remove('hidden')
+    historySection.classList.add('hidden')
+    donationForNoukhali.classList.remove('hidden')
+    donationForFeni.classList.remove('hidden')
+    donationForMovement.classList.remove('hidden')
 })
 
 // Blog Page
 document.getElementById('blog-btn').addEventListener('click', function () {
     window.location.href = 'blog.html'
 })
-
-// Common Function 1 (Challenge Part)
-function handleDonationValueById(id) {
-    const donationValue = document.getElementById(id).value;
-    const donationNumber = Number(donationValue);
-    return donationNumber
-}
-
-// Common Function 2 (Challenge Part)
-function handleDonationAmountById(id) {
-    const totalDonationAmount = document.getElementById(id).innerText;
-    const totalDonationNumber = Number(totalDonationAmount);
-    return totalDonationNumber
-}
 
 // Card 1
 document.getElementById('donate-now-btn1').addEventListener('click', function () {
